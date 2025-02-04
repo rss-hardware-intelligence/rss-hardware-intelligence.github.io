@@ -3,57 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RSS 2024 Hardware Intelligence Workshop</title>
+  <title>1st Workshop on Robot Hardware-Aware Intelligence</title>
   <style>
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Arial", sans-serif;
       line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
     }
 
+    /* Header with Background Image */
     header {
       background-color: #333;
+      padding: 10px 0;
     }
+
     nav ul {
       list-style: none;
       margin: 0;
-      padding: 10px 0;
+      padding: 0;
       text-align: center;
     }
+
     nav ul li {
       display: inline;
-      margin: 0 15px;
+      margin: 0 20px;
     }
+
     nav ul li a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav ul li a:hover {
       text-decoration: underline;
     }
 
-    main {
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: url('bg-placeholder.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
       padding: 20px;
     }
+
+    /* Title Styling */
+    .hero h1 {
+      font-size: 3em; /* Largest font */
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .hero .subtitle {
+      font-size: 1.7em; /* Smaller than the title */
+      color: #1e3a8a; /* Dark blue */
+      margin-top: 10px;
+    }
+
+    .hero .contact {
+      font-size: 1.4em; /* Even smaller */
+      color: #0b57d2; /* Lighter blue */
+      margin-top: 5px;
+    }
+
+    /* Conference Logo Inside Hero Section */
+    .conference-logo {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 10px; /* Space between logo and title */
+    }
+
+    .conference-logo img {
+      width: 120px; /* Adjust size as needed */
+    }
+
+    /* Main Content */
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
     section {
       margin-bottom: 40px;
     }
+
     section h2 {
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
 
+    /* Footer */
     footer {
-      background-color: #333;
-      color: #fff;
+      background-color: #222;
+      color: white;
       text-align: center;
       padding: 15px 0;
+      margin-top: 40px;
     }
+
   </style>
 </head>
 <body>
+
+  <!-- Navigation Header -->
   <header>
     <nav>
       <ul>
@@ -66,60 +143,61 @@
     </nav>
   </header>
 
+  <!-- Hero Section with Conference Logo -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <!-- Conference Logo Inside Hero -->
+      <div class="conference-logo">
+        <a href="https://roboticsconference.org/" target="_blank">
+          <img src="rss-25-logo.png" alt="RSS 2025 Logo">
+        </a>
+      </div>
+
+      <!-- Workshop Title and Details -->
+      <h1>1st Workshop on Robot Hardware-Aware Intelligence</h1>
+      <p class="subtitle">RSS 2025, Los Angeles, California | Wednesday, June 25th, 2025</p>
+      <p class="contact"><a href="mailto:rss.hardware.intelligence@gmail.com" style="color: inherit; text-decoration: underline;">rss.hardware.intelligence@gmail.com</a></p>
+    </div>
+  </div>
+
   <!-- Main Content Sections -->
   <main>
-    <!-- Overview Section -->
     <section id="overview">
       <h2>Overview</h2>
-      <p>
-        Overview placeholder
-      </p>
+      <p>Overview placeholder</p>
     </section>
 
-    <!-- Areas of Interest Section -->
     <section id="areas-of-interest">
       <h2>Areas of Interest</h2>
-      <p>
-        Areas of Interest placeholder
-      </p>
+      <p>Areas of Interest placeholder</p>
     </section>
 
-    <!-- Important Dates Section -->
     <section id="important-dates">
       <h2>Important Dates</h2>
-      <p>
-        Important Dates placeholder
-      </p>
+      <p>Important Dates placeholder</p>
     </section>
 
-    <!-- Schedule Section -->
     <section id="schedule">
       <h2>Schedule</h2>
-      <p>
-        Schedule placeholder, needs to include invited talks, coffee breaks, panel, and paper presentations (?)
-      </p>
+      <p>Schedule placeholder, needs to include invited talks, coffee breaks, panel, and paper presentations (?).</p>
     </section>
 
-    <!-- Invited Speakers Section -->
     <section id="invited-speakers">
       <h2>Invited Speakers</h2>
-      <p>
-        Invited speakers placeholder
-      </p>
+      <p>Invited speakers placeholder</p>
     </section>
 
-    <!-- Accepted Papers Section -->
     <section id="accepted-papers">
       <h2>Accepted Papers</h2>
-      <p>
-        Accepted papers placeholder
-      </p>
+      <p>Accepted papers placeholder</p>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Footer placeholder</p>
+    <p>&copy; RSS 2025 Workshop | Robot Hardware-Aware Intelligence</p>
   </footer>
+
 </body>
 </html>

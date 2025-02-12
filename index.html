@@ -113,6 +113,8 @@
     }
 
     section h2 {
+      font-size: 2em;
+      text-align: center;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
@@ -124,6 +126,57 @@
       text-align: center;
       padding: 15px 0;
       margin-top: 40px;
+    }
+
+
+    #invited-speakers {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #invited-speakers h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .speakers-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px; /* Space between speakers */
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .speaker {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .speaker img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .speaker-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #1e3a8a; /* Dark blue */
+      text-decoration: none;
+    }
+
+    .speaker-name:hover {
+      text-decoration: underline;
+    }
+
+    .speaker p {
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.4;
     }
 
   </style>
@@ -185,7 +238,53 @@
 
     <section id="invited-speakers">
       <h2>Invited Speakers</h2>
-      <p>Invited speakers placeholder</p>
+      <div class="speakers-container">
+        <!-- Row 1 -->
+        <div class="speaker">
+          <img src="speakers/Adelson-250x250.png" alt="Ted Adelson">
+          <a href="https://bcs.mit.edu/directory/edward-adelson" class="speaker-name">Ted Adelson</a>
+          <p>MIT</p>
+        </div>
+    
+        <div class="speaker">
+          <img src="speakers/Andrew Beaulieu.png" alt="Andrew Beaulieu">
+          <a href="https://www.tri.global/about-us/andrew-beaulieu" class="speaker-name">Andrew Beaulieu</a>
+          <p>Toyota Research Institute</p>
+        </div>
+    
+        <div class="speaker">
+          <img src="speakers/prof-robert-katzschmann.person_image.jpeg" alt="Robert Katzschmann">
+          <a href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html" class="speaker-name">Robert Katzschmann</a>
+          <p>ETH Zürich</p>
+        </div>
+    
+        <div class="speaker">
+          <img src="speakers/shuran_song.jpg" alt="Shuran Song">
+          <a href="https://shurans.github.io/" class="speaker-name">Shuran Song</a>
+          <p>Stanford University</p>
+        </div>
+      </div>
+    
+      <div class="speakers-container">
+        <!-- Row 2 -->
+        <div class="speaker">
+          <img src="speakers/taodu_photo.jpg" alt="Tao Du">
+          <a href="https://people.iiis.tsinghua.edu.cn/~taodu/" class="speaker-name">Tao Du</a>
+          <p>Tsinghua University</p>
+        </div>
+    
+        <div class="speaker">
+          <img src="speakers/yiyueluo.jpg" alt="Yiyue Luo">
+          <a href="https://yyueluo.com/" class="speaker-name">Yiyue Luo</a>
+          <p>University of Washington</p>
+        </div>
+    
+        <div class="speaker">
+          <img src="speakers/pi_placeholder.jpg" alt="xxx">
+          <a href="xxx" class="speaker-name">xxx</a>
+          <p>Physical Intelligence (π)</p>
+        </div>
+      </div>
     </section>
 
     <section id="accepted-papers">

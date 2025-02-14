@@ -6,260 +6,294 @@
   <title>1st Workshop on Robot Hardware-Aware Intelligence</title>
   <style>
 
-    body {
-      margin: 0;
-      font-family: "Arial", sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-    }
+  body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
 
-    /* Header with Background Image */
-    header {
-      background-color: #333;
-      padding: 10px 0;
-    }
+  /* Header with Background */
+  header {
+    background-color: #2b2929;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
+  }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
 
-    nav ul li {
-      display: inline;
-      margin: 0 20px;
-    }
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 350px;
-      background: url('bg-placeholder.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background: rgba(240, 240, 240, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    padding-top: 20px;
+  }
 
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
-    }
+  .hero-overlay {
+    display: none;
+  }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-    }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+  }
 
-    /* Title Styling */
-    .hero h1 {
-      font-size: 3em; /* Largest font */
-      font-weight: bold;
-      margin: 0;
-    }
+  .conference-logo {
+    position: relative;
+    z-index: 5;
+    margin-top: -20px;
+  }
 
-    .hero .subtitle {
-      font-size: 1.7em; /* Smaller than the title */
-      color: #1e3a8a; /* Dark blue */
-      margin-top: 10px;
-    }
+  .conference-logo img {
+    width: 100px;
+  }
 
-    .hero .contact {
-      font-size: 1.4em; /* Even smaller */
-      color: #0b57d2; /* Lighter blue */
-      margin-top: 5px;
-    }
+  .hero h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
 
-    /* Conference Logo Inside Hero Section */
-    .conference-logo {
-      position: relative;
-      z-index: 2;
-      margin-bottom: 10px; /* Space between logo and title */
-    }
+  .hero .subtitle {
+    font-size: 1.4em;
+    color: #1e3a8a;
+    margin-top: 3px;
+  }
 
-    .conference-logo img {
-      width: 120px; /* Adjust size as needed */
-    }
+  .hero .contact {
+    font-size: 1.2em;
+    color: #0b57d2;
+    margin-top: 3px;
+  }
 
-    /* Main Content */
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+  main {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
 
-    section {
-      margin-bottom: 40px;
-    }
+  section {
+    padding: 20px 0;
+    margin: 0 auto;
+    max-width: 900px;
+  }
 
-    section h2 {
-      font-size: 2em;
-      text-align: center;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
+  section h2 {
+    font-size: 1.8em;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
 
-    /* Footer */
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-    }
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 30px;
+  }
 
+  #invited-speakers {
+    text-align: center;
+  }
 
-    #invited-speakers {
-      text-align: center;
-      padding: 40px 20px;
-    }
+  .speakers-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
 
-    #invited-speakers h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+  .speaker {
+    text-align: center;
+    max-width: 180px;
+  }
 
-    .speakers-container {
-      display: flex;
-      justify-content: center;
-      gap: 50px; /* Space between speakers */
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
+  .speaker img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 
-    .speaker {
-      text-align: center;
-      max-width: 200px;
-    }
+  .speaker-name {
+    font-size: 1em;
+    font-weight: bold;
+    color: #1e3a8a;
+    text-decoration: none;
+  }
 
-    .speaker img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  .speaker-name:hover {
+    text-decoration: underline;
+  }
 
-    .speaker-name {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #1e3a8a; /* Dark blue */
-      text-decoration: none;
-    }
+  .speaker p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+  }
 
-    .speaker-name:hover {
-      text-decoration: underline;
-    }
+  .schedule-container {
+    max-width: 900px;
+    margin: auto;
+  }
 
-    .speaker p {
-      font-size: 0.9em;
-      color: #555;
-      line-height: 1.4;
-    }
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+  }
 
-    .schedule-container {
-      max-width: 900px;
-      margin: auto;
-    }
+  .schedule-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
 
-    .schedule-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1em;
-    }
+  .schedule-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
 
-    .schedule-table tr:nth-child(even) {
-      background-color: #f5f5f5; /* Light grey alternating rows */
-    }
+  .schedule-table td:first-child {
+    font-weight: bold;
+    white-space: nowrap;
+    width: 150px;
+  }
 
-    .schedule-table td {
-      padding: 12px 15px;
-      border-bottom: 1px solid #ddd;
-    }
+  .schedule-table td a {
+    color: #1e3a8a;
+    text-decoration: none;
+  }
 
-    .schedule-table td:first-child {
-      font-weight: bold;
-      white-space: nowrap;
-      width: 150px; /* Keeps time column narrow */
-    }
+  .schedule-table td a:hover {
+    text-decoration: underline;
+  }
 
-    .schedule-table td a {
-      color: #1e3a8a; /* Dark blue links */
-      text-decoration: none;
-    }
+  .dates-container {
+    max-width: 600px;
+    margin: auto;
+  }
 
-    .schedule-table td a:hover {
-      text-decoration: underline;
-    }
+  .dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+  }
 
-    .schedule-table ul {
-      margin: 5px 0;
-      padding-left: 20px;
-    }
+  .dates-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
 
-    .schedule-table ul li {
-      margin-bottom: 5px;
-    }
+  .dates-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
 
-    .schedule-table td:nth-child(2) {
-      text-align: center; /* Centers text horizontally */
-      vertical-align: middle; /* Ensures text is centered vertically */
-    }
-    #important-dates {
-      text-align: center;
-      padding: 40px 20px;
-    }
+  .dates-table td:last-child {
+    font-weight: bold;
+  }
 
-    .dates-container {
-      max-width: 600px;
-      margin: auto;
-    }
+  .committee-container {
+    max-width: 700px;
+    margin: auto;
+  }
 
-    .dates-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1.1em;
-    }
+  .committee-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+  }
 
-    .dates-table tr:nth-child(even) {
-      background-color: #f5f5f5; /* Light gray alternating rows */
-    }
+  .committee-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
 
-    .dates-table td {
-      padding: 12px 15px;
-      text-align: center; /* Centers all text */
-      border-bottom: 1px solid #ddd;
-    }
+  .committee-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
 
-    .dates-table td:first-child {
-      font-weight: normal;
-    }
+  .committee-table td a {
+    color: #1e3a8a;
+    text-decoration: none;
+  }
 
-    .dates-table td:last-child {
-      font-weight: bold; /* Bold dates */
-    }
+  .committee-table td a:hover {
+    text-decoration: underline;
+  }
+
+  #call-for-papers {
+    text-align: center;
+  }
+
+  .cfp-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+  }
+
+  .cfp-container h3 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 15px;
+  }
+
+  .cfp-container h4 {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+
+  .cfp-container p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .cfp-container a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .cfp-container a:hover {
+    text-decoration: underline;
+  }
 
   </style>
 </head>
@@ -322,9 +356,18 @@
     </section>
 
     <section id="call-for-papers">
-      <h2>Tentative Call for Papers</h2>
-      <p>call for papers placeholder</p>
+      <h2>Call for Papers</h2>
+      <div class="cfp-container">
+        <p>We invite submissions in two formats: <strong>extended abstracts (2-4 pages, poster presentation)</strong> and <strong>full papers (4-8 pages, spotlight talk)</strong>. We encourage submissions that include <strong>hardware demos</strong>. 
+            which will be presented interactively at the workshop, fostering hands-on discussions and engagement with the audience.</p> All submissions should follow the <a href="https://roboticsconference.org/" target="_blank">RSS 2025 paper format</a>. References and supplementary materials are not counted towards the page limit.</p>
+        <ul>
+          <li><strong>Extended Abstracts (Poster Presentation): </strong>Extended abstracts (2-4 pages) will be presented as posters during the workshop, allowing for interactive discussions and feedback on ongoing research.</li>
+          <li><strong>Full Papers (Spotlight Talk): </strong>Full papers (4-8 pages) will be considered for spotlight presentations, with a <strong>4-minute talk</strong> to the workshop audience.</li>
+        </ul>
+        <p><strong>Submission Website:</strong> <a href="#" target="_blank">TBD</a></p>
+      </div>
     </section>
+    
 
     <section id="important-dates">
       <h2>Important Dates</h2>
@@ -427,7 +470,6 @@
     <section id="invited-speakers">
       <h2>Invited Speakers</h2>
       <div class="speakers-container">
-        <!-- Row 1 -->
         <div class="speaker">
           <img src="speakers/Adelson-250x250.png" alt="Ted Adelson">
           <a href="https://bcs.mit.edu/directory/edward-adelson" class="speaker-name">Ted Adelson</a>
@@ -454,7 +496,6 @@
       </div>
     
       <div class="speakers-container">
-        <!-- Row 2 -->
         <div class="speaker">
           <img src="speakers/taodu_photo.jpg" alt="Tao Du">
           <a href="https://people.iiis.tsinghua.edu.cn/~taodu/" class="speaker-name">Tao Du</a>
@@ -475,13 +516,59 @@
       </div>
     </section>
 
-    <section id="accepted-papers">
+    <!-- <section id="accepted-papers">
       <h2>Accepted Papers</h2>
-      <p>Accepted papers placeholder</p>
-    </section>
-  </main>
+      <p>TBD</p>
+    </section> -->
+  <!-- </main> -->
 
-  <!-- Footer -->
+  <section id="committees">
+    <h2>Organizing Committee</h2>
+    <div class="committee-container">
+      <table class="committee-table">
+        <tbody>
+          <tr>
+            <td>Huy Ha</td>
+            <td><a href="mailto:huyha@stanford.edu">huyha@stanford.edu</a></td>
+            <td>Stanford University</td>
+          </tr>
+          <tr>
+            <td>Zhanyi Sun</td>
+            <td><a href="mailto:zhanyis@stanford.edu">zhanyis@stanford.edu</a></td>
+            <td>Stanford University</td>
+          </tr>
+          <tr>
+            <td>Xiaomeng Xu</td>
+            <td><a href="mailto:xuxm@stanford.edu">xuxm@stanford.edu</a></td>
+            <td>Stanford University</td>
+          </tr>
+          <tr>
+            <td>Yuxiang Ma</td>
+            <td><a href="mailto:yxma20@mit.edu">yxma20@mit.edu</a></td>
+            <td>MIT</td>
+          </tr>
+          <tr>
+            <td>Sha Yi</td>
+            <td><a href="mailto:shayi@ucsd.edu">shayi@ucsd.edu</a></td>
+            <td>UCSD</td>
+          </tr>
+          <tr>
+            <td>Mike Tolley</td>
+            <td><a href="mailto:tolley@ucsd.edu">tolley@ucsd.edu</a></td>
+            <td>UCSD</td>
+          </tr>
+          <tr>
+            <td>Xiaolong Wang</td>
+            <td><a href="mailto:xiw012@ucsd.edu">xiw012@ucsd.edu</a></td>
+            <td>UCSD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+
+</main>
   <footer>
     <p>&copy; RSS 2025 Workshop | Robot Hardware-Aware Intelligence</p>
   </footer>

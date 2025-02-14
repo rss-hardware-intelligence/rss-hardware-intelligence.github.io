@@ -227,6 +227,39 @@
       text-align: center; /* Centers text horizontally */
       vertical-align: middle; /* Ensures text is centered vertically */
     }
+    #important-dates {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .dates-container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .dates-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.1em;
+    }
+
+    .dates-table tr:nth-child(even) {
+      background-color: #f5f5f5; /* Light gray alternating rows */
+    }
+
+    .dates-table td {
+      padding: 12px 15px;
+      text-align: center; /* Centers all text */
+      border-bottom: 1px solid #ddd;
+    }
+
+    .dates-table td:first-child {
+      font-weight: normal;
+    }
+
+    .dates-table td:last-child {
+      font-weight: bold; /* Bold dates */
+    }
 
   </style>
 </head>
@@ -238,7 +271,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#call-for-papers">Call for Papers</a></li>
-        <li><a href="#dates">Dates</a></li>
+        <li><a href="#important-dates">Dates</a></li>
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#committees">Committees</a></li>
       </ul>
@@ -293,10 +326,32 @@
       <p>call for papers placeholder</p>
     </section>
 
-    <section id="dates">
+    <section id="important-dates">
       <h2>Important Dates</h2>
-      <p>a table that includes paper submission ddl, acceptance date, camera-ready ddl, and workshop date</p>
+      <div class="dates-container">
+        <table class="dates-table">
+          <tbody>
+            <tr>
+              <td>Paper Submission Deadline</td>
+              <td><strong>TBD (AoE)</strong></td>
+            </tr>
+            <tr>
+              <td>Paper Acceptance</td>
+              <td><strong>TBD (AoE)</strong></td>
+            </tr>
+            <tr>
+              <td>Camera-ready Version Due</td>
+              <td><strong>TBD (AoE)</strong></td>
+            </tr>
+            <tr>
+              <td>Workshop</td>
+              <td><strong>June 25, 2025</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+    
 
     <section id="schedule">
       <h2>Schedule</h2>
@@ -355,7 +410,7 @@
               <td>16:00 PM - 16:45 PM</td>
               <td>
                 <strong>Panel Discussion</strong><br>
-                Moderator: <a href="#">TBD</a><br>
+                Moderator: TBD<br>
                 Panelists: TBD
               </td>
             </tr>

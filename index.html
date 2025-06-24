@@ -1,303 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brain and Brawn: 1st Workshop on Robot Hardware-Aware Intelligence</title>
   <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
 
-  body {
-    margin: 0;
-    font-family: "Arial", sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
+    /* Header with Background */
+    header {
+      background-color: #2b2929;
+      padding: 10px 0;
+      position: relative;
+      z-index: 10;
+    }
 
-  /* Header with Background */
-  header {
-    background-color: #2b2929;
-    padding: 10px 0;
-    position: relative;
-    z-index: 10;
-  }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
 
-  nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
 
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 335px;
+      background: rgba(240, 240, 240, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: black;
+      padding-top: 20px;
+      /* min-height: 60vh; */
+    }
 
-  /* Hero Section */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 335px;
-    background: rgba(240, 240, 240, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: black;
-    padding-top: 20px;
-    /* min-height: 60vh; */
-  }
+    .hero-overlay {
+      display: none;
+    }
 
-  .hero-overlay {
-    display: none;
-  }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+    }
 
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 10px;
-  }
+    .conference-logo {
+      position: relative;
+      z-index: 5;
+      margin-top: 20px;
+    }
 
-  .conference-logo {
-    position: relative;
-    z-index: 5;
-    margin-top: -20px;
-  }
+    .conference-logo img {
+      width: 100px;
+    }
 
-  .conference-logo img {
-    width: 100px;
-  }
+    .hero h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
 
-  .hero h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin: 10px 0 5px;
-  }
+    .hero .subtitle {
+      font-size: 1.4em;
+      color: #1e3a8a;
+      margin-top: 3px;
+    }
 
-  .hero .subtitle {
-    font-size: 1.4em;
-    color: #1e3a8a;
-    margin-top: 3px;
-  }
+    .hero .contact {
+      font-size: 1.2em;
+      color: #0b57d2;
+      margin-top: 3px;
+    }
 
-  .hero .contact {
-    font-size: 1.2em;
-    color: #0b57d2;
-    margin-top: 3px;
-  }
+    main {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-  main {
-    padding: 30px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
+    section {
+      padding: 20px 0;
+      margin: 0 auto;
+      max-width: 900px;
+    }
 
-  section {
-    padding: 20px 0;
-    margin: 0 auto;
-    max-width: 900px;
-  }
+    section h2 {
+      font-size: 1.8em;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
 
-  section h2 {
-    font-size: 1.8em;
-    text-align: center;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-  }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      margin-top: 30px;
+    }
 
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 12px 0;
-    margin-top: 30px;
-  }
+    #invited-speakers {
+      text-align: center;
+    }
 
-  #invited-speakers {
-    text-align: center;
-  }
+    .speakers-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
 
-  .speakers-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
+    .speaker {
+      text-align: center;
+      max-width: 180px;
+    }
 
-  .speaker {
-    text-align: center;
-    max-width: 180px;
-  }
+    .speaker img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 8px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
 
-  .speaker img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 8px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
+    .speaker-name {
+      font-size: 1em;
+      font-weight: bold;
+      color: #1e3a8a;
+      text-decoration: none;
+    }
 
-  .speaker-name {
-    font-size: 1em;
-    font-weight: bold;
-    color: #1e3a8a;
-    text-decoration: none;
-  }
+    .speaker-name:hover {
+      text-decoration: underline;
+    }
 
-  .speaker-name:hover {
-    text-decoration: underline;
-  }
+    .speaker p {
+      font-size: 0.9em;
+      color: #555;
+      line-height: 1.4;
+    }
 
-  .speaker p {
-    font-size: 0.9em;
-    color: #555;
-    line-height: 1.4;
-  }
+    .schedule-container {
+      max-width: 900px;
+      margin: auto;
+    }
 
-  .schedule-container {
-    max-width: 900px;
-    margin: auto;
-  }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+    }
 
-  .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1em;
-  }
+    .schedule-table tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
 
-  .schedule-table tr:nth-child(even) {
-    background-color: #f5f5f5;
-  }
+    .schedule-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
 
-  .schedule-table td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-  }
+    .schedule-table td:first-child {
+      font-weight: bold;
+      white-space: nowrap;
+      width: 150px;
+    }
 
-  .schedule-table td:first-child {
-    font-weight: bold;
-    white-space: nowrap;
-    width: 150px;
-  }
+    .schedule-table td a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
 
-  .schedule-table td a {
-    color: #1e3a8a;
-    text-decoration: none;
-  }
+    .schedule-table td a:hover {
+      text-decoration: underline;
+    }
 
-  .schedule-table td a:hover {
-    text-decoration: underline;
-  }
+    .dates-container {
+      max-width: 600px;
+      margin: auto;
+    }
 
-  .dates-container {
-    max-width: 600px;
-    margin: auto;
-  }
+    .dates-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+    }
 
-  .dates-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1em;
-  }
+    .dates-table tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
 
-  .dates-table tr:nth-child(even) {
-    background-color: #f5f5f5;
-  }
+    .dates-table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
 
-  .dates-table td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
+    .dates-table td:last-child {
+      font-weight: bold;
+    }
 
-  .dates-table td:last-child {
-    font-weight: bold;
-  }
+    .committee-container {
+      max-width: 700px;
+      margin: auto;
+    }
 
-  .committee-container {
-    max-width: 700px;
-    margin: auto;
-  }
+    .committee-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+    }
 
-  .committee-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1em;
-  }
+    .committee-table tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
 
-  .committee-table tr:nth-child(even) {
-    background-color: #f5f5f5;
-  }
+    .committee-table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
 
-  .committee-table td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
+    .committee-table td a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
 
-  .committee-table td a {
-    color: #1e3a8a;
-    text-decoration: none;
-  }
+    .committee-table td a:hover {
+      text-decoration: underline;
+    }
 
-  .committee-table td a:hover {
-    text-decoration: underline;
-  }
+    #call-for-papers {
+      text-align: center;
+    }
 
-  #call-for-papers {
-    text-align: center;
-  }
+    .cfp-container {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
 
-  .cfp-container {
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
-  }
+    .cfp-container h3 {
+      text-align: center;
+      font-size: 1.4em;
+      margin-top: 15px;
+    }
 
-  .cfp-container h3 {
-    text-align: center;
-    font-size: 1.4em;
-    margin-top: 15px;
-  }
+    .cfp-container h4 {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
 
-  .cfp-container h4 {
-    font-size: 1.1em;
-    margin-top: 10px;
-  }
+    .cfp-container p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
 
-  .cfp-container p {
-    font-size: 1em;
-    line-height: 1.5;
-  }
+    .cfp-container a {
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  .cfp-container a {
-    color: #1e3a8a;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .cfp-container a:hover {
-    text-decoration: underline;
-  }
-
+    .cfp-container a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation Header -->
@@ -319,11 +319,11 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <!-- Conference Logo Inside Hero -->
-      <div class="conference-logo">
-        <a href="https://roboticsconference.org/" target="_blank">
+      <!-- <div class="conference-logo">
+        <a href="https://roboticsconference.org/">
           <img src="rss-25-logo.png" alt="RSS 2025 Logo">
         </a>
-      </div>
+      </div> -->
 
       <!-- Workshop Title and Details -->
       <!-- <h1>Brain and Brawn: 1st Workshop on Robot Hardware-Aware Intelligence</h1> -->
@@ -338,7 +338,13 @@
         1st Workshop on Robot Hardware-Aware Intelligence
       </h1>
       <p class="subtitle">RSS 2025, Los Angeles, California | Wednesday, June 25th, 2025</p>
-      <p class="contact"><a href="mailto:rss.hardware.intelligence@gmail.com" style="color: inherit; text-decoration: underline;">rss.hardware.intelligence@gmail.com</a></p>
+      <p class="subtitle">
+        📍 Location: EEB 248 <a href="https://maps.app.goo.gl/wDhS3as4cH5bgEur5">(Hughes Aircraft Electrical
+          Engineering
+          Center) </a>
+      </p>
+      <p class="contact"><a href="mailto:rss.hardware.intelligence@gmail.com"
+          style="color: inherit; text-decoration: underline;">rss.hardware.intelligence@gmail.com</a></p>
     </div>
   </div>
 
@@ -346,12 +352,20 @@
   <main>
     <section id="overview">
       <h2>Overview</h2>
-      Advances in artificial intelligence and robotics have increasingly relied on better algorithms or larger datasets while often overlooking the critical role of hardware. 
-      In this workshop, we aim to addresses the wide gap between mechanical engineers, who design complex and innovative hardware, and computer scientists, who develop intelligent software for simplified or standard platforms. Bridging this divide is essential for creating integrated, intelligent systems that fully exploit the potential of both fields.
-      By bringing together researchers from robotics, machine learning, and mechanical engineering, in this workshop we aims to foster interdisciplinary collaboration, present cutting-edge research, and propose new methodologies for unifying hardware and intelligence in robotics.
-      
+      Advances in artificial intelligence and robotics have increasingly relied on better algorithms or larger datasets
+      while often overlooking the critical role of hardware.
+      In this workshop, we aim to addresses the wide gap between mechanical engineers, who design complex and innovative
+      hardware, and computer scientists, who develop intelligent software for simplified or standard platforms. Bridging
+      this divide is essential for creating integrated, intelligent systems that fully exploit the potential of both
+      fields.
+      By bringing together researchers from robotics, machine learning, and mechanical engineering, in this workshop we
+      aims to foster interdisciplinary collaboration, present cutting-edge research, and propose new methodologies for
+      unifying hardware and intelligence in robotics.
+
       <!-- <p><strong>📍 Location: EEB 248</strong></p> -->
-       <p style="font-size: 2.5rem; font-weight: bold;">📍 Location: EEB 248</p>
+      <p>📍 Location: EEB 248 <a href="https://maps.app.goo.gl/wDhS3as4cH5bgEur5">(Hughes Aircraft Electrical
+          Engineering
+          Center) </a></p>
 
       <div style="text-align: center; margin-top: 1em;">
         <img src="workshop_location.png" alt="Map to EEB 248" style="max-width: 100%; height: auto;">
@@ -362,14 +376,25 @@
       <h2>Areas of Interest</h2>
       <p>We invite contributions and discussions on topics related to hardware-aware intelligence, including:</p>
       <ul>
-        <li><strong>Hardware for Sample Efficient Learning:</strong> Exploring how novel hardware designs facilitate sample-efficient learning-based control or support data collection. </li>
-        <li><strong>Hardware for Low Cost/Scalable Data Collection:</strong> Developing intelligent robotic systems using low-cost components, open-source hardware, and rapid prototyping tools to democratize robotics research and enable scalable data collection and experimentation.</li>
-        <li><strong>Sensor Optimization:</strong> Designing, placing, and integrating sensor suites to maximize perceptual fidelity and improve learning outcomes.</li>
-        <li><strong>Generative and Evolutionary Hardware Design:</strong> Leveraging generative models, evolutionary algorithms, and data-driven techniques to automatically discover and optimize robotic structures and control strategies.</li>
-        <li><strong>Co-Design of Control and Hardware:</strong> Joint optimization of physical design and control policies for high-performance robotic systems.</li>
-        <li><strong>Manufacture-in-the-Loop Design and Fabrication:</strong> Integrating manufacturing constraints and capabilities directly into the design loop to enable iterative, fabrication-aware robot design.</li>
-        <li><strong>Learning for Unconventional Hardware Platforms:</strong> Developing modeling and learning methods tailored to unconventional hardware, such as soft robots, underactuated mechanisms, and reconfigurable structures.</li>
-        <li><strong>Foundation Models for Hardware Design:</strong> Exploring the role of large-scale pretrained foundation models in automating and accelerating robot design, simulation, and optimization workflows.</li>
+        <li><strong>Hardware for Sample Efficient Learning:</strong> Exploring how novel hardware designs facilitate
+          sample-efficient learning-based control or support data collection. </li>
+        <li><strong>Hardware for Low Cost/Scalable Data Collection:</strong> Developing intelligent robotic systems
+          using low-cost components, open-source hardware, and rapid prototyping tools to democratize robotics research
+          and enable scalable data collection and experimentation.</li>
+        <li><strong>Sensor Optimization:</strong> Designing, placing, and integrating sensor suites to maximize
+          perceptual fidelity and improve learning outcomes.</li>
+        <li><strong>Generative and Evolutionary Hardware Design:</strong> Leveraging generative models, evolutionary
+          algorithms, and data-driven techniques to automatically discover and optimize robotic structures and control
+          strategies.</li>
+        <li><strong>Co-Design of Control and Hardware:</strong> Joint optimization of physical design and control
+          policies for high-performance robotic systems.</li>
+        <li><strong>Manufacture-in-the-Loop Design and Fabrication:</strong> Integrating manufacturing constraints and
+          capabilities directly into the design loop to enable iterative, fabrication-aware robot design.</li>
+        <li><strong>Learning for Unconventional Hardware Platforms:</strong> Developing modeling and learning methods
+          tailored to unconventional hardware, such as soft robots, underactuated mechanisms, and reconfigurable
+          structures.</li>
+        <li><strong>Foundation Models for Hardware Design:</strong> Exploring the role of large-scale pretrained
+          foundation models in automating and accelerating robot design, simulation, and optimization workflows.</li>
 
       </ul>
     </section>
@@ -382,39 +407,40 @@
           <a href="https://bcs.mit.edu/directory/edward-adelson" class="speaker-name">Ted Adelson</a>
           <p>MIT</p>
         </div>
-    
+
         <div class="speaker">
           <img src="speakers/Andrew Beaulieu.png" alt="Andrew Beaulieu">
           <a href="https://www.tri.global/about-us/andrew-beaulieu" class="speaker-name">Andrew Beaulieu</a>
           <p>Toyota Research Institute</p>
         </div>
-    
+
         <div class="speaker">
           <img src="speakers/prof-robert-katzschmann.person_image.jpeg" alt="Robert Katzschmann">
-          <a href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html" class="speaker-name">Robert Katzschmann</a>
+          <a href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html" class="speaker-name">Robert
+            Katzschmann</a>
           <p>ETH Zürich</p>
         </div>
-    
+
         <div class="speaker">
           <img src="speakers/shuran_song.jpg" alt="Shuran Song">
           <a href="https://shurans.github.io/" class="speaker-name">Shuran Song</a>
           <p>Stanford University</p>
         </div>
       </div>
-    
+
       <div class="speakers-container">
         <div class="speaker">
           <img src="speakers/taodu_photo.jpg" alt="Tao Du">
           <a href="https://people.iiis.tsinghua.edu.cn/~taodu/" class="speaker-name">Tao Du</a>
           <p>Tsinghua University</p>
         </div>
-    
+
         <div class="speaker">
           <img src="speakers/yiyueluo.jpg" alt="Yiyue Luo">
           <a href="https://yyueluo.com/" class="speaker-name">Yiyue Luo</a>
           <p>University of Washington</p>
         </div>
-    
+
         <div class="speaker">
           <img src="speakers/quan_vuong.png" alt="">
           <a href="https://quanvuong.github.io/" class="speaker-name">Quan Vuong</a>
@@ -447,14 +473,22 @@
               <td>
                 <strong>Poster Lightning Talks (3 min each)</strong>
                 <div style="text-align: left; padding-left: 1em;">
-                  <a href="https://openreview.net/forum?id=46Ce6ebsjv">BiFlex: A Passive Bimodal Stiffness Flexible Wrist for Manipulation in Unstructured Environments</a><br>
-                  <a href="https://openreview.net/forum?id=vN2h57wwkT">DEXOS: Hand Exoskeleton System for Teaching Robot Dexterous Manipulation In-The-Wild</a><br>
-                  <a href="https://openreview.net/forum?id=7NU01kPwY6">Hardware Optimization for In-Hand Rotation</a><br>
-                  <a href="https://openreview.net/forum?id=aT9Lexcxb5#discussion">DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation</a><br>
-                  <a href="https://openreview.net/forum?id=6jKGNR2TKe#discussion">DexWrist: A Robotic Wrist for Constrained and Dynamic Manipulation</a><br>
-                  <a href="https://openreview.net/forum?id=XoAuTKoPyU#discussion">AnySkin: Plug-and-play Skin Sensing for Robotic Touch</a><br>
-                  <a href="https://openreview.net/forum?id=CsSud00Tgh#discussion">eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures</a><br>
-                  <a href="https://openreview.net/forum?id=PQgMmGLzCC#discussion">ACE-F: A Cross Embodiment Foldable System with Force Feedback for Dexterous Teleoperation</a><br>
+                  <a href="https://openreview.net/forum?id=46Ce6ebsjv">BiFlex: A Passive Bimodal Stiffness Flexible
+                    Wrist for Manipulation in Unstructured Environments</a><br>
+                  <a href="https://openreview.net/forum?id=vN2h57wwkT">DEXOS: Hand Exoskeleton System for Teaching Robot
+                    Dexterous Manipulation In-The-Wild</a><br>
+                  <a href="https://openreview.net/forum?id=7NU01kPwY6">Hardware Optimization for In-Hand
+                    Rotation</a><br>
+                  <a href="https://openreview.net/forum?id=aT9Lexcxb5#discussion">DexUMI: Using Human Hand as the
+                    Universal Manipulation Interface for Dexterous Manipulation</a><br>
+                  <a href="https://openreview.net/forum?id=6jKGNR2TKe#discussion">DexWrist: A Robotic Wrist for
+                    Constrained and Dynamic Manipulation</a><br>
+                  <a href="https://openreview.net/forum?id=XoAuTKoPyU#discussion">AnySkin: Plug-and-play Skin Sensing
+                    for Robotic Touch</a><br>
+                  <a href="https://openreview.net/forum?id=CsSud00Tgh#discussion">eFlesh: Highly customizable Magnetic
+                    Touch Sensing using Cut-Cell Microstructures</a><br>
+                  <a href="https://openreview.net/forum?id=PQgMmGLzCC#discussion">ACE-F: A Cross Embodiment Foldable
+                    System with Force Feedback for Dexterous Teleoperation</a><br>
                 </div>
               </td>
             </tr>
@@ -464,22 +498,29 @@
                 <strong><i>Coffee Break, Poster Session, and Hardware Demos</i></strong><br>
                 Posters of all presented papers and the following hardware demos: <br>
                 <div style="text-align: left; padding-left: 1em;">
-                  <a href="https://openreview.net/forum?id=vN2h57wwkT">DEXOS：Hand exoskeleton for dexterous manipulation data collection in the wild</a><br>
-                  <a href="https://openreview.net/forum?id=6jKGNR2TKe#discussion">DexWrist: A Robotic Wrist for Constrained and Dynamic Manipulation</a><br>
+                  <a href="https://openreview.net/forum?id=vN2h57wwkT">DEXOS：Hand exoskeleton for dexterous manipulation
+                    data collection in the wild</a><br>
+                  <a href="https://openreview.net/forum?id=6jKGNR2TKe#discussion">DexWrist: A Robotic Wrist for
+                    Constrained and Dynamic Manipulation</a><br>
                   <a href="https://any-skin.github.io/">AnySkin: Plug-and-play Skin Sensing for Robotic Touch</a><br>
-                  <a href="https://e-flesh.com/">eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures</a><br>
-                  <a href="https://drive.google.com/file/d/1ovNtJhPOdEVxnzbP-qdJyyC0fF__rAQR/view">ACE-F: A Cross Embodiment Foldable System with Force Feedback for Dexterous Teleoperation</a><br>
-                  <a href="https://dex-umi.github.io/">DexUMI: Using Human Hand as the Universal Manipulation Interface for Dexterous Manipulation</a><br>
+                  <a href="https://e-flesh.com/">eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell
+                    Microstructures</a><br>
+                  <a href="https://drive.google.com/file/d/1ovNtJhPOdEVxnzbP-qdJyyC0fF__rAQR/view">ACE-F: A Cross
+                    Embodiment Foldable System with Force Feedback for Dexterous Teleoperation</a><br>
+                  <a href="https://dex-umi.github.io/">DexUMI: Using Human Hand as the Universal Manipulation Interface
+                    for Dexterous Manipulation</a><br>
                 </div>
               </td>
             </tr>
             <tr>
               <td>11:00 AM - 11:30 AM</td>
-              <td><strong>Invited Talk: </strong><a href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html">Robert Katzschmann</a></td>
+              <td><strong>Invited Talk: </strong><a
+                  href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html">Robert Katzschmann</a></td>
             </tr>
             <tr>
               <td>11:30 AM - 12:00 PM</td>
-              <td><strong>Invited Talk: </strong><a href="https://bcs.mit.edu/directory/edward-adelson">Ted Adelson</a></td>
+              <td><strong>Invited Talk: </strong><a href="https://bcs.mit.edu/directory/edward-adelson">Ted Adelson</a>
+              </td>
             </tr>
             <tr>
               <td>12:00 PM - 12:30 PM</td>
@@ -495,26 +536,38 @@
             </tr>
             <tr>
               <td>14:30 PM - 15:00 PM</td>
-              <td><strong>Invited Talk: </strong><a href="https://www.tri.global/about-us/andrew-beaulieu">Andrew Beaulieu</a></td>
+              <td><strong>Invited Talk: </strong><a href="https://www.tri.global/about-us/andrew-beaulieu">Andrew
+                  Beaulieu</a></td>
             </tr>
             <tr>
               <td>15:00 PM - 15:30 PM</td>
-                <td><strong>Panel Discussion</strong><br>
-                Panelists: <a href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html">Robert Katzschmann</a>, <a href="https://quanvuong.github.io/">Quan Vuong</a>, <a href="https://tolley.eng.ucsd.edu/">Michael Tolley</a>, <a href="https://www.tri.global/about-us/andrew-beaulieu">Andrew Beaulieu</a><br></td>
+              <td><strong>Panel Discussion</strong><br>
+                Panelists: <a href="https://srl.ethz.ch/the-group/prof-robert-katzschmann.html">Robert Katzschmann</a>,
+                <a href="https://quanvuong.github.io/">Quan Vuong</a>, <a href="https://tolley.eng.ucsd.edu/">Michael
+                  Tolley</a>, <a href="https://www.tri.global/about-us/andrew-beaulieu">Andrew Beaulieu</a><br>
+              </td>
             </tr>
             <tr>
               <td>15:30 PM - 16:00 PM</td>
               <td>
                 <strong>Poster Lightning Talks (3 min each)</strong>
                 <div style="text-align: left; padding-left: 1em;">
-                  <a href="https://openreview.net/forum?id=9LMG2hQ3jq#discussion">Towards Embodiment Scaling Laws in Robot Locomotion</a><br>
-                  <a href="https://openreview.net/forum?id=wSh8eDatc2#discussion">DexWild: Dexterous Human Interactions for In-the-Wild Robot Policies</a><br>
-                  <a href="https://openreview.net/forum?id=z6W0DV4int#discussion">Robot Trains Robot: Automatic Real-World Policy Adaptation and Learning for Humanoids</a><br>
-                  <a href="https://openreview.net/forum?id=ZGqqPMQDEk#discussion">Touch in the Wild: Learning Fine-Grained Manipulation with a Portable Visuo-Tactile Gripper</a><br>
-                  <a href="https://openreview.net/forum?id=zJKf0kpQTD#discussion">Efficient End-effector Co-Design by Demonstration for Deformable Fragile Object Manipulation</a><br>
-                  <a href="https://openreview.net/forum?id=ZaPhaXUmYW#discussion">AnyBody: A Benchmark Suite for Cross-Embodiment Manipulation</a><br>
-                  <a href="https://openreview.net/forum?id=cguzT10d5i#discussion">Learning to extend legs of a transformable-wheel robot</a><br>
-                  <a href="https://openreview.net/forum?id=i3JNInaLb9#discussion">VLMgineer: Vision Language Models as Robotic Toolsmiths</a><br>
+                  <a href="https://openreview.net/forum?id=9LMG2hQ3jq#discussion">Towards Embodiment Scaling Laws in
+                    Robot Locomotion</a><br>
+                  <a href="https://openreview.net/forum?id=wSh8eDatc2#discussion">DexWild: Dexterous Human Interactions
+                    for In-the-Wild Robot Policies</a><br>
+                  <a href="https://openreview.net/forum?id=z6W0DV4int#discussion">Robot Trains Robot: Automatic
+                    Real-World Policy Adaptation and Learning for Humanoids</a><br>
+                  <a href="https://openreview.net/forum?id=ZGqqPMQDEk#discussion">Touch in the Wild: Learning
+                    Fine-Grained Manipulation with a Portable Visuo-Tactile Gripper</a><br>
+                  <a href="https://openreview.net/forum?id=zJKf0kpQTD#discussion">Efficient End-effector Co-Design by
+                    Demonstration for Deformable Fragile Object Manipulation</a><br>
+                  <a href="https://openreview.net/forum?id=ZaPhaXUmYW#discussion">AnyBody: A Benchmark Suite for
+                    Cross-Embodiment Manipulation</a><br>
+                  <a href="https://openreview.net/forum?id=cguzT10d5i#discussion">Learning to extend legs of a
+                    transformable-wheel robot</a><br>
+                  <a href="https://openreview.net/forum?id=i3JNInaLb9#discussion">VLMgineer: Vision Language Models as
+                    Robotic Toolsmiths</a><br>
                 </div>
               </td>
             </tr>
@@ -524,10 +577,13 @@
                 <strong><i>Coffee Break, Poster Session, and Hardware Demos</i></strong><br>
                 Posters of all presented papers and the following hardware demos: <br>
                 <div style="text-align: left; padding-left: 1em;">
-                  <a href="https://yswhynot.github.io/codesign-soft/">Co-Design of Soft Gripper with Neural Physics</a><br>
+                  <a href="https://yswhynot.github.io/codesign-soft/">Co-Design of Soft Gripper with Neural
+                    Physics</a><br>
                   <a href="https://www.youtube.com/watch?v=Die7nx-gOJA">MOTIF Hand</a><br>
-                  <a href="https://drive.google.com/drive/u/0/folders/1SQLghQ0j6enpV-YX7noxH84wivpWpfHv">Blind Locomotion of a Transformable-Wheel Robot</a><br>
-                  <a href="https://cone-e.com/">Cone-E: An Open Source Bimanual Mobile Manipulator for Generalizable Robotics</a><br>
+                  <a href="https://drive.google.com/drive/u/0/folders/1SQLghQ0j6enpV-YX7noxH84wivpWpfHv">Blind
+                    Locomotion of a Transformable-Wheel Robot</a><br>
+                  <a href="https://cone-e.com/">Cone-E: An Open Source Bimanual Mobile Manipulator for Generalizable
+                    Robotics</a><br>
                   <a href="https://www.robotera.com/en/goods1/4.html">XHAND</a><br>
                 </div>
               </td>
@@ -540,7 +596,7 @@
         </table>
       </div>
     </section>
-    
+
 
     <!-- <section id="call-for-papers">
       <h2>Call for Papers</h2>
@@ -554,36 +610,50 @@
         <p><strong>Submission Link:</strong> <a href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2025/Workshop/Hardware_Intelligence&referrer=%5BHomepage%5D(%2F)#tab-your-consoles" target="_blank">OpenReview submission</a></p>
       </div>
     </section> -->
-    
+
     <section id="call-for-papers">
       <h2>Call for Papers and Demos</h2>
       <div class="cfp-container">
-        <p>We invite both <strong>paper submissions</strong> and <strong>hardware demo submissions</strong>. Submissions should follow the guidelines below:</p>
-    
+        <p>We invite both <strong>paper submissions</strong> and <strong>hardware demo submissions</strong>. Submissions
+          should follow the guidelines below:</p>
+
         <ul>
           <li>
             <strong>Paper Submissions (Poster Presentation + Selected Lightning Talks):</strong>
-            <p>We invite <strong>4–8 page papers</strong> in the <a href="https://roboticsconference.org/" target="_blank">RSS 2025 paper format</a>. Submissions will be <strong>single-blind</strong>. All accepted papers will be presented as posters during the workshop. A subset of papers will be selected for <strong>3-minute spotlight talks</strong>. References and supplementary materials are not counted towards the page limit.</p>
-            <p><strong>Submission Link:</strong> <a href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2025/Workshop/Hardware_Intelligence" target="_blank">OpenReview submission</a></p>
+            <p>We invite <strong>4–8 page papers</strong> in the <a href="https://roboticsconference.org/"
+                target="_blank">RSS 2025 paper format</a>. Submissions will be <strong>single-blind</strong>. All
+              accepted papers will be presented as posters during the workshop. A subset of papers will be selected for
+              <strong>3-minute spotlight talks</strong>. References and supplementary materials are not counted towards
+              the page limit.
+            </p>
+            <p><strong>Submission Link:</strong> <a
+                href="https://openreview.net/group?id=roboticsfoundation.org/RSS/2025/Workshop/Hardware_Intelligence"
+                target="_blank">OpenReview submission</a></p>
           </li>
-    
+
           <li>
             <strong>Hardware Demo Submissions:</strong>
-            <p>We encourage the submission of <strong>hardware demonstrations</strong>, which will be presented interactively at the workshop to foster hands-on engagement with attendees. Submissions will be <strong>single-blind</strong> and must include:</p>
+            <p>We encourage the submission of <strong>hardware demonstrations</strong>, which will be presented
+              interactively at the workshop to foster hands-on engagement with attendees. Submissions will be
+              <strong>single-blind</strong> and must include:
+            </p>
             <ul>
               <li>A short paragraph describing the system</li>
               <li>A description of how attendees will interact with the system</li>
               <li>Multimedia (e.g., video or images) showcasing the system in action</li>
               <li>A list of resources required (e.g., space, internet, electrical outlets, etc.)</li>
             </ul>
-            <p><strong>No camera-ready version is required.</strong> Commercial sales and marketing activities from companies are allowed.</p>
-            <p><strong>Submission Link:</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR0r_g_MpCJ-Z9mmpA02EVFzUZ4dGzd1xh2F2mZTR8PmPKDg/viewform" target="_blank">Hardware Demo Submission Form</a></p>
+            <p><strong>No camera-ready version is required.</strong> Commercial sales and marketing activities from
+              companies are allowed.</p>
+            <p><strong>Submission Link:</strong> <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdR0r_g_MpCJ-Z9mmpA02EVFzUZ4dGzd1xh2F2mZTR8PmPKDg/viewform"
+                target="_blank">Hardware Demo Submission Form</a></p>
           </li>
         </ul>
       </div>
     </section>
 
-    
+
     <!-- <section id="important-dates">
       <h2>Important Dates</h2>
       <div class="dates-container">
@@ -619,58 +689,59 @@
       <h2>Accepted Papers</h2>
       <p>TBD</p>
     </section> -->
-  <!-- </main> -->
+    <!-- </main> -->
 
-  <section id="committees">
-    <h2>Organizing Committee</h2>
-    <div class="committee-container">
-      <table class="committee-table">
-        <tbody>
-          <tr>
-            <td>Huy Ha</td>
-            <td><a href="mailto:huyha@stanford.edu">huyha@stanford.edu</a></td>
-            <td>Stanford University</td>
-          </tr>
-          <tr>
-            <td>Zhanyi Sun</td>
-            <td><a href="mailto:zhanyis@stanford.edu">zhanyis@stanford.edu</a></td>
-            <td>Stanford University</td>
-          </tr>
-          <tr>
-            <td>Xiaomeng Xu</td>
-            <td><a href="mailto:xuxm@stanford.edu">xuxm@stanford.edu</a></td>
-            <td>Stanford University</td>
-          </tr>
-          <tr>
-            <td>Yuxiang Ma</td>
-            <td><a href="mailto:yxma20@mit.edu">yxma20@mit.edu</a></td>
-            <td>MIT</td>
-          </tr>
-          <tr>
-            <td>Sha Yi</td>
-            <td><a href="mailto:shayi@ucsd.edu">shayi@ucsd.edu</a></td>
-            <td>UCSD</td>
-          </tr>
-          <tr>
-            <td>Mike Tolley</td>
-            <td><a href="mailto:tolley@ucsd.edu">tolley@ucsd.edu</a></td>
-            <td>UCSD</td>
-          </tr>
-          <tr>
-            <td>Xiaolong Wang</td>
-            <td><a href="mailto:xiw012@ucsd.edu">xiw012@ucsd.edu</a></td>
-            <td>UCSD</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-  
+    <section id="committees">
+      <h2>Organizing Committee</h2>
+      <div class="committee-container">
+        <table class="committee-table">
+          <tbody>
+            <tr>
+              <td>Huy Ha</td>
+              <td><a href="mailto:huyha@stanford.edu">huyha@stanford.edu</a></td>
+              <td>Stanford University</td>
+            </tr>
+            <tr>
+              <td>Zhanyi Sun</td>
+              <td><a href="mailto:zhanyis@stanford.edu">zhanyis@stanford.edu</a></td>
+              <td>Stanford University</td>
+            </tr>
+            <tr>
+              <td>Xiaomeng Xu</td>
+              <td><a href="mailto:xuxm@stanford.edu">xuxm@stanford.edu</a></td>
+              <td>Stanford University</td>
+            </tr>
+            <tr>
+              <td>Yuxiang Ma</td>
+              <td><a href="mailto:yxma20@mit.edu">yxma20@mit.edu</a></td>
+              <td>MIT</td>
+            </tr>
+            <tr>
+              <td>Sha Yi</td>
+              <td><a href="mailto:shayi@ucsd.edu">shayi@ucsd.edu</a></td>
+              <td>UCSD</td>
+            </tr>
+            <tr>
+              <td>Mike Tolley</td>
+              <td><a href="mailto:tolley@ucsd.edu">tolley@ucsd.edu</a></td>
+              <td>UCSD</td>
+            </tr>
+            <tr>
+              <td>Xiaolong Wang</td>
+              <td><a href="mailto:xiw012@ucsd.edu">xiw012@ucsd.edu</a></td>
+              <td>UCSD</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-</main>
+
+  </main>
   <footer>
     <p>&copy; RSS 2025 Workshop | Robot Hardware-Aware Intelligence</p>
   </footer>
 
 </body>
+
 </html>
